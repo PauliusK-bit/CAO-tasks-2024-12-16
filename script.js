@@ -117,3 +117,104 @@ console.log(cities.find((letter) => letter.charAt(0) === "K"));
 console.log(cities.some((v) => v.charAt(0) === v.charAt(0).toLowerCase()));
 
 console.log(cities.every((v) => v.charAt(0) === v.charAt(0).toUpperCase()));
+
+let friendsName = [
+  "Beata",
+  "Aidas",
+  "Haris",
+  "Dainius",
+  "Eglė",
+  "Fėja",
+  "Gabija",
+  "Cezar",
+  "Jūratė",
+  "Ieva",
+  "Vaidotas",
+  "Lina",
+  "Marius",
+  "Neringa",
+  "Orestas",
+  "Ugnė",
+  "Rūta",
+  "Zita",
+  "Saras",
+  "Tomas",
+  "Paulina",
+  "Kostas",
+  "Wanda",
+  "Xenia",
+  "Yva",
+];
+
+friendsName.sort();
+console.log(friendsName);
+
+friendsName.sort((a, b) => b > a);
+console.log(friendsName);
+
+let numbers = [5, 10, 20, 11, 12, 1, 0, 14, 25];
+
+numbers.sort((a, b) => b - a);
+console.log(numbers);
+
+let secondArray = [10, 5, 20, 4];
+secondArray.sort((a, b) => b - a);
+console.log(secondArray[0]);
+
+const people = [
+  {
+    name: "Petras",
+    age: "18",
+  },
+  {
+    name: "Jonas",
+    age: 15,
+  },
+  {
+    name: "Antanas",
+    age: 20,
+  },
+  {
+    name: "Urtė",
+    age: 10,
+  },
+  {
+    name: "Diana",
+    age: 25,
+  },
+  {
+    name: "Ieva",
+    age: 16,
+  },
+];
+
+// console.log(people.filter((x) => x.age >= 18));
+// console.log(people.filter((x) => x.age >= 18).map((person) => person.name));
+// console.log(
+//   people
+//     .filter((x) => x.age >= 18)
+//     .map((person) => person.name)
+//     .sort()
+// );
+
+console.log(
+  people
+    .filter((x) => x.age >= 18)
+    .map((person) => person.name)
+    .sort()
+);
+
+const drinks = [
+  { name: "lemonade", price: 50 },
+  { name: "lime", price: 10 },
+];
+
+function fn(items) {
+  items.sort((a, b) => a.price - b.price);
+  return {
+    pigiausias: items[0].name,
+    brangiausias: items[items.length - 1].name,
+  };
+}
+
+console.log(fn(drinks));
