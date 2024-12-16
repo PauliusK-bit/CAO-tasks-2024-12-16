@@ -218,3 +218,15 @@ function fn(items) {
 }
 
 console.log(fn(drinks));
+
+function addElement(array, element) {
+  array.push(element);
+  return array;
+}
+
+console.log(addElement([1, 2, 3], 4));
+
+const mergeArrays = (firstArr, secondArr) => {
+  return [...firstArr, ...secondArr];
+};
+console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
