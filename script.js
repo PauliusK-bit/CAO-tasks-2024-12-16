@@ -67,3 +67,53 @@ let isLegalAge = true;
 
 console.log(isLegalAge);
 console.log(isLegalAge.toString());
+
+function alertName(text) {
+  console.log(text);
+}
+
+function consoleName(secondText) {
+  console.log(secondText);
+}
+
+function coreFunction(name, callback) {
+  const capitalizedName =
+    name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  callback(capitalizedName);
+}
+
+coreFunction("pAulius", consoleName);
+
+// const cars = ["BMW", "VW", "Audi"];
+
+// cars.forEach((car) => {
+//   console.log(car);
+// });
+
+const cars = ["BMW", "VW", "Audi"];
+
+cars.forEach((car, index) => console.log(index + ":" + car));
+
+let friends = ["petras", "jonas", "paulius", "aNtanas"];
+
+let newNames = friends.map(
+  (friendNames) =>
+    friendNames.charAt(0).toUpperCase() + friendNames.slice(1).toLowerCase()
+);
+console.log(newNames);
+
+// Sukurkite array su savo draugų amžiais (nuo 1 iki 99). Naudojant filter – išveskite tik tuos skaičius, kurie yra didesni arba lygūs 18.
+
+let friendsAge = [12, 18, 24, 65, 42, 11, 78];
+
+let filterAge = friendsAge.filter((x) => x >= 18);
+
+console.log(filterAge);
+
+let cities = ["Vilnius", "Kaunas", "Palanga", "Klaipėda"];
+
+console.log(cities.find((letter) => letter.charAt(0) === "K"));
+
+console.log(cities.some((v) => v.charAt(0) === v.charAt(0).toLowerCase()));
+
+console.log(cities.every((v) => v.charAt(0) === v.charAt(0).toUpperCase()));
